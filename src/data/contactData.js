@@ -19,7 +19,7 @@ export const registrationInfo = {
 
   // ── Fee ────────────────────────────────────────────
   // Update this string with the actual registration fee
-  fee: '₹200 per team',                  // ← CHANGE THIS
+  fee: '₹400 per team',                  // ← CHANGE THIS
 
   // ── Deadline ───────────────────────────────────────
   // Update with the final registration deadline date
