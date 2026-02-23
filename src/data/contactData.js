@@ -28,11 +28,11 @@ export const registrationInfo = {
   // ── Payment Modes ──────────────────────────────────
   // List the accepted payment methods.
   // You can add/remove items from this array.
-  paymentModes: ['UPI', 'Cash at venue'],
+  paymentModes: ['UPI', 'Cash Before Event'],  // ← EDIT THIS
 
   // ── UPI ID ─────────────────────────────────────────
   // Replace with your club's / organizer's UPI ID
-  upiId: 'robogenesis@upi',             // ← CHANGE THIS
+  upiId: '9035612372-3@ibl',             // ← CHANGE THIS
 
   // ── QR Code ────────────────────────────────────────
   // HOW TO ADD YOUR QR CODE:
@@ -41,12 +41,12 @@ export const registrationInfo = {
   //   3. The image will appear automatically on the page.
   //
   // Leave as null to show the placeholder box.
-  qrCodePath: null,                      // ← e.g. '/qr-code.png'
+  qrCodePath: '/Mahesh-QR-Code.jpeg',                      // ← e.g. '/qr-code.png'
 
   // ── Online Registration Link ────────────────────────
   // Paste your Google Form / registration portal URL here.
   // This is used by the "Register Here" button.
-  registrationLink: '#',                 // ← CHANGE THIS to your form URL
+  registrationLink: 'https://forms.gle/apM3tJtYK9GB8Dv96',                 // ← CHANGE THIS to your form URL
 }
 
 
