@@ -1,0 +1,164 @@
+/**
+ * EVENT SECTION STYLES
+ * ====================
+ * Styles for the main event section.
+ * 
+ * TO CHANGE LAYOUT:
+ * - Modify padding, margins, and spacing values below
+ * - To change colors, modify CSS variables in src/index.css
+ */
+
+.event-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background gradient effect */
+.event-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.event-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.event-organization {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.event-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.event-tagline {
+  font-size: 1.5rem;
+  color: var(--color-text-accent);
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.event-details-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.event-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.contact-link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  .event-tagline {
+    font-size: 1.2rem;
+  }
+  
+  .event-details-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  
+  .event-detail-item.full-width {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-title {
+    font-size: 2.5rem;
+  }
+  
+  .event-tagline {
+    font-size: 1rem;
+  }
+  
+  .event-details-card {
+    padding: 1.5rem;
+  }
+}
+
